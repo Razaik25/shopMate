@@ -1,4 +1,6 @@
-# ![](http://searchengineland.com/figz/wp-content/seloads/2014/08/shopping-bags-retail-ss-1920.jpg) Project #2: ShopMate
+### Project #2: ShopMate
+
+#![](https://static.mgmresorts.com/content/dam/MGM/monte-carlo/retail/shopping-hero-image/monte-carlo-amenities-shopping-bags.tiff.image.1440.550.high.jpg)
 
 ### Introduction - How to use it?
 
@@ -13,9 +15,14 @@ This application will allow the users to maintain a **simple shopping list**. Do
 * bcrypt node module
 * pg node module
 * body-parser node module
+* ejs templating engine
 
 ### User Stories:
 * As a user, there should be a welcome page that allows me to sign up for the application or log in if i already have an account.
 * As a user, after I log-in, the page should be inviting and it should let me complete most of the application functions from this page.
 * As a user, I should able to make a new list and add/update/delete items to it.
 * As a user, I should be able to see all of my shopping lists.
+
+### DataBase Design:
+## Entity Relationship Diagram
+#![](wireframes.png)
