@@ -15,6 +15,10 @@ This application will allow the users to maintain a **simple shopping list**. Do
 * bcrypt node module
 * pg node module
 * body-parser node module
+* dotenv node module
+* morgan node module
+* express-session node module
+* connect-pg-simple node module
 * ejs templating engine
 
 ### User Stories:
