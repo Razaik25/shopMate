@@ -20,6 +20,8 @@ This application will allow the users to maintain a **simple shopping list**. Do
 * express-session node module
 * connect-pg-simple node module
 * method-override node module
+* path node module
+* pryjs node module
 * ejs templating engine
 
 ### User Stories:
