@@ -24,5 +24,8 @@ This application will allow the users to maintain a **simple shopping list**. Do
 * As a user, I should be able to see all of my shopping lists.
 
 ### DataBase Design:
-## Entity Relationship Diagram
+#### Entity Relationship Diagram version 1:
+#![](ERD.png)
+
+### Wireframes version 1:
 #![](wireframes.png)
