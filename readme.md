@@ -41,11 +41,14 @@ This application will allow the users to maintain a **simple shopping list**. Do
 ### RESTful Routes:
 ||Description| Method | Route Name | View rendered |
 |---|---|---|---|---|
-|1|Show welcome page | GET  | `/` | `index.ejs` |
-|2|Click on sign up | POST  | `/` | _none_, redirects to view 4 |
-|3|Login page| POST | `/users/login` | _none_, redirects to view 4|
-|4|Show lists specific to each user|GET|`/users/:user_id`|`users_one.ejs`|
-|6|Edit lists specific to each user |POST or PUT?|`/users/:user_id/:list_id/edit`| users_one.ejs|
-|7|Edit Items in lists specific to each user |POST or PUT?|`/users/:user_id/:list_id/edit/:item_id`| users_one.ejs|
-|8|Delete Items in a list |DELETE|`/users/:user_id/:list_id/edit/:item_id`| none, redirects to the users_one.ejs|
-|9|Show create new list form |GET| `/users/:user_id/:list_id/new| |users_edit.ejs|
+|1|Show application login/signup page | GET  | `/` | `index.ejs` |
+|2|If the user signs up, take them to welcome page | POST | |`/welcome`| |`welcome.ejs`|
+|3|If the user logs in, take them to welcome page | GET | |`/welcome`| |`welcome.ejs`|
+|4|Show myaccount page, after step 2 or 3, this will show all the lists specific to each user | GET | |`myaccount`| |`users_one.ejs`|
+|5|If the user clicks on add list then let the user add list name and items to it|GET,POST |myaccount\lists\add| |`users_one.ejs`|
+|6|When the user clicks on a edit/delete specific list, it will show all the items in the list | GET | |`lists\:list_id`| |`users_one_list.ejs`|
+|7|If it is edit, show all the items in the list  | GET | |`lists\:list_id`| |`users_one_list.ejs`|
+|8|If it is delete | delete | |`lists\:list_id`| |delete the list and show all my lists view `users_one.ejs`|
+|9|If the user clicks on the specific item, take them to that item page |GET| |`lists\:list_id\items\:item_id`| |`users_one_list_item.ejs`|
+|10|If the user clicks on update item, take them to the parent list page with updated information| PUT | |`lists\:list_id`| |`users_one_list.ejs`|
+|11|If the user clicks on delete item, take them to the parent list |DELETE| |`users_one_list.ejs`|
