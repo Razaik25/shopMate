@@ -19,6 +19,7 @@ This application will allow the users to maintain a **simple shopping list**. Do
 * morgan node module
 * express-session node module
 * connect-pg-simple node module
+* method-override node module
 * ejs templating engine
 
 ### User Stories:

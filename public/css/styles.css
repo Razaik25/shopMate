@@ -1,0 +1,76 @@
+body {
+	font-family: Futura;
+}
+
+#bg-container {
+    background: url(images/background.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.box {
+	margin: auto;
+	position: relative;
+	top: 60px;
+	height: auto;
+	min-height: 400px;
+	width: 575px;
+	background-color: white;
+	opacity: 0.7;
+	border-radius: 5px;
+
+}
+
+.box h1 {
+	position: relative;
+	font-size: 40px;
+  width: 12em;
+  left: -2em;
+	padding: 40px 0 0 177px;
+
+}
+
+.name {
+  position: relative;
+  width: 240px;
+  left: 12em;
+}
+
+.email {
+  position: relative;
+  width: 240px;
+  top: 3em;
+  left: 21em;
+}
+
+.password {
+  position: relative;
+  width: 240px;
+  top: 8em;
+  left: -92px;
+}
+
+#label2 {
+  position: relative;
+  left: -298px;
+  top: 3em;
+}
+#label3 {
+  position: relative;
+  top: 85px;
+  left: -199px;
+}
+
+.icon {
+	position: relative;
+  top: -76px;
+  left: 3em;
+  width: 7%;
+}
+
+
+/*.checked-off {
+	text-decoration: line-through;
+}*/
