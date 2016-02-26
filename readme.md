@@ -42,13 +42,13 @@ This application will allow the users to maintain a **simple shopping list**. Do
 ||Description| Method | Route Name | View rendered |
 |---|---|---|---|---|
 |1|Show application login/signup page | GET  | `/` | `index.ejs` |
-|2|If the user signs up, take them to welcome page | POST | |`/welcome`| |`welcome.ejs`|
-|3|If the user logs in, take them to welcome page | GET | |`/welcome`| |`welcome.ejs`|
-|4|Show myaccount page, after step 2 or 3, this will show all the lists specific to each user | GET | |`myaccount`| |`users_one.ejs`|
-|5|If the user clicks on add list then let the user add list name and items to it|GET,POST |myaccount\lists\add| |`users_one.ejs`|
-|6|When the user clicks on a edit/delete specific list, it will show all the items in the list | GET | |`lists\:list_id`| |`users_one_list.ejs`|
-|7|If it is edit, show all the items in the list  | GET | |`lists\:list_id`| |`users_one_list.ejs`|
-|8|If it is delete | delete | |`lists\:list_id`| |delete the list and show all my lists view `users_one.ejs`|
-|9|If the user clicks on the specific item, take them to that item page |GET| |`lists\:list_id\items\:item_id`| |`users_one_list_item.ejs`|
-|10|If the user clicks on update item, take them to the parent list page with updated information| PUT | |`lists\:list_id`| |`users_one_list.ejs`|
-|11|If the user clicks on delete item, take them to the parent list |DELETE| |`users_one_list.ejs`|
+|2|If the user signs up, take them to welcome page | POST  |`/welcome`|`welcome.ejs`|
+|3|If the user logs in, take them to welcome page | GET |`/welcome`| |`welcome.ejs`|
+|4|Show myaccount page, after step 2 or 3, this will show all the lists specific to each user | GET  |`myaccount` |`users_one.ejs`|
+|5|If the user clicks on add list then let the user add list name and items to it|GET,POST |myaccount\lists\add |`users_one.ejs`|
+|6|When the user clicks on a edit/delete specific list, it will show all the items in the list | GET  |`lists\:list_id`|`users_one_list.ejs`|
+|7|If it is edit, show all the items in the list  | GET  |`lists\:list_id`|`users_one_list.ejs`|
+|8|If it is delete | delete | |`lists\:list_id` |delete the list and show all my lists view `users_one.ejs`|
+|9|If the user clicks on the specific item, take them to that item page |GET|`lists\:list_id\items\:item_id` |`users_one_list_item.ejs`|
+|10|If the user clicks on update item, take them to the parent list page with updated information| GET,PUT  |`lists\:list_id\items\:item_id\edit`|`users_one_list.ejs`|
+|11|If the user clicks on delete item, take them to the parent list |DELETE| lists\:list_id\items\:item_id\delete|`users_one_list.ejs`|
