@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ../partials/head %>
+  </head>
+
+  <body>
+    <header>
+      <%- include ../partials/nav %>
+
+    </header>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>ShopMate</h1>
+        <% if (user) {%>
+          <h3>Welcome <%= user %></h3>
+        <% } %>
+      </div>
+
+    </div><!-- /.container -->
+
+
+    <%- include ../partials/footer %>
+  </body>
+</html>

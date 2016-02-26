@@ -36,3 +36,16 @@ This application will allow the users to maintain a **simple shopping list**. Do
 
 ### Wireframes version 1:
 #![](wireframes.png)
+
+
+### RESTful Routes:
+||Description| Method | Route Name | View rendered |
+|---|---|---|---|---|
+|1|Show welcome page | GET  | `/` | `index.ejs` |
+|2|Click on sign up | POST  | `/` | _none_, redirects to view 4 |
+|3|Login page| POST | `/users/login` | _none_, redirects to view 4|
+|4|Show lists specific to each user|GET|`/users/:user_id`|`users_one.ejs`|
+|6|Edit lists specific to each user |POST or PUT?|`/users/:user_id/:list_id/edit`| users_one.ejs|
+|7|Edit Items in lists specific to each user |POST or PUT?|`/users/:user_id/:list_id/edit/:item_id`| users_one.ejs|
+|8|Delete Items in a list |DELETE|`/users/:user_id/:list_id/edit/:item_id`| none, redirects to the users_one.ejs|
+|9|Show create new list form |GET| `/users/:user_id/:list_id/new| |users_edit.ejs|

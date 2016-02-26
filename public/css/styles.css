@@ -2,6 +2,18 @@ body {
 	font-family: Futura;
 }
 
+.starter-template {
+
+  padding: 40px 15px;
+  text-align: center;
+}
+.h1, h1 {
+ padding-top: 73px;
+}
+.container {
+  text-align: center;
+}
+
 #bg-container {
     background: url(images/background.jpg) no-repeat;
     background-size: cover;
@@ -35,7 +47,7 @@ body {
 .name {
   position: relative;
   width: 240px;
-  left: 12em;
+  left: 16em;
 }
 
 .email {
@@ -52,9 +64,15 @@ body {
   left: -92px;
 }
 
+#lable1 {
+	position: relative;
+  top: 2px;
+  left: 3em;
+}
+
 #label2 {
   position: relative;
-  left: -298px;
+  left: -254px;
   top: 3em;
 }
 #label3 {
@@ -63,11 +81,73 @@ body {
   left: -199px;
 }
 
+#label4 {
+	position: relative;
+  top: 2em;
+  left: 6em;
+}
+
+#label5 {
+  position: relative;
+  top: 85px;
+  left: -200px;
+}
+
+.email1 {
+	position: relative;
+	width: 240px;
+	top: 3em;
+	left: 21em;
+}
+
+.password1 {
+	position: relative;
+	width: 240px;
+	top: 5em;
+	left: 284px;
+}
+
+.loginbutton2{
+	position: relative;
+  top: 14em;
+  left: -4em;
+}
+
 .icon {
 	position: relative;
   top: -76px;
   left: 3em;
   width: 7%;
+}
+
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+
+.signbutton {
+  position: relative;
+  left: 7em;
+  top: 13em;
+}
+
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #505050;
+  color: #000;
+}
+
+.loginbutton {
+  position: relative;
+  top: 9em;
+  left: 29em;
 }
 
 
