@@ -15,37 +15,8 @@ lists.use(function(req, res, next) {
 
 // shows all the lists specific to each user -- have to come back to this
 lists.get('/', listsdb.showlistsforuser,function(req,res){
-  // res.render('pages/user_lists.ejs',{userName:req.session.user.name});
-  res.lists.forEach(function(lists){
-
-      console.log(lists.listname);
-      // console.log(lists.items_name);
-      for( var i=0;i<lists.items_name.length;i++){
-        console.log(lists.items_name[i]);
-        console.log(lists.items_quantity[i]);
-        console.log(lists.items_price[i]);
-        console.log(lists.brought[i]);
-      }
-      // console.log(lists.items_quantity);
-      // console.log(lists.items_price);
-      // console.log(lists.brought);
-    });
   res.render('pages/user_lists.ejs',{userName:req.session.user.name, data:res.lists});
 });
-
-// to show all the lists for a user
-// lists.get('/show', listsdb.showlistsforuser, function(req,res){
-//   // res.render('pages/user_lists.ejs',{userName:req.session.user.name});
-//   console.log(res.lists);
-//   res.lists.forEach(function(lists){
-//     console.log(lists.listname);
-//     console.log(lists.items_name);
-//     console.log(lists.items_quantity);
-//     console.log(lists.items_price);
-//     console.log(lists.brought);
-//   });
-//   res.render('pages/user_lists.ejs',{userName:req.session.user.name, data:res.lists});
-// });
 
 // to add lists
 lists.get('/new', function(req,res){

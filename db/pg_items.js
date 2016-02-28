@@ -34,9 +34,6 @@ function additems(req,res,next){
         if(err) {
           return console.error('error running query', err);
         }
-        // if(index === req.body.cheeses.length-1){
-        //   done();
-        // }
       });
 
       next();

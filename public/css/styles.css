@@ -3,16 +3,64 @@ body {
 }
 
 .starter-template {
-
   padding: 40px 15px;
   text-align: center;
 }
+
 .h1, h1 {
  padding-top: 73px;
  padding-bottom: 49px;
 }
 .container {
   text-align: center;
+}
+
+.container {
+ text-align: center;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.listcard {
+   width: 400px;
+   margin: 5% auto;
+   box-shadow: 0 1px 30px rgba(0,0,0,.4);
+   background-color: #fff;
+   border-radius: 4px;
+   transition: 400ms ease;
+}
+
+.card-img {
+  height: 300px;
+}
+
+.card-img img {
+  position: relative;
+  width:60%;
+  left: -15px;
+  margin: 5% auto;
+  padding: 15px 35px 5px 25px;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.card-data {
+   position: relative;
+   left: -15px;
+	 top: -4em;
+   padding: 0px 25px 5px 25px;
+   border-radius: 0px 0px 4px 4px;
+   font-size: 15px;
+}
+
+.card-listname{
+	position: relative;
+	top: -3em;
+	left: -1em;
+	font-size: 20px;
 }
 
 #bg-container {
@@ -192,19 +240,18 @@ body {
   left: 61em;
   width: 6%;
   height: 28px;
-  /*padding: 6px 12px;
-  font-size: 14px;*/
 }
 
 .additem {
-
-
 	position: relative;
-top: -4em;
-left: 27em;
-width: 114px;
-height: 47px;
-font-size: 18px;
+	top: -4em;
+	left: 27em;
+	width: 114px;
+	height: 47px;
+	font-size: 18px;
+}
+.item-img img {
+    width: 24%;
 }
 
 

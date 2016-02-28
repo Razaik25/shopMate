@@ -21,6 +21,34 @@
           <h3>Welcome <%= userName %></h3>
         <% } %>
       </div>
+      <div class="container2">
+        <% data.forEach (function(lists) { %>
+          <div class="listcard">
+            <ul>
+              <div class="card-img">
+                <p><img src="http://sandyhaight.com/wp-content/uploads/2011/02/3shopping-cart-600x600.jpg"></p>
+             </div>
+              <div class="card-listname">
+                <p><b>List Name: </b><%=lists.listname%></p>
+              </div>
+             <div class="card-data">
+
+              <% for( var i=0;i<lists.items_name.length;i++){ %>
+                <!-- <div class="item-card"> -->
+                  <div class="item-img">
+                  <img src="./css/images/item.png">
+                   <p><b>Name: </b><%=lists.items_name[i]%></p>
+                   <p><b>Quantity: </b><%=lists.items_quantity[i]%></p>
+                   <p><b>Price: </b><%=lists.items_price[i]%></p>
+                   <p><b>Brought: </b><%=lists.brought[i]%></p>
+                 </div>
+               <!-- </div> -->
+              <%}%>
+            </div>
+           </ul>
+          </div>
+      <% }) %>
+      </div>
     </form>
 
     </div><!-- /.container -->
