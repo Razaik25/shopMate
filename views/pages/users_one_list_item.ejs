@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ../partials/head %>
+  </head>
+  <body>
+    <header>
+      <%- include ../partials/nav %>
+      <form method="post" action="/users/logout?_method=DELETE">
+        <button class="btn btn-default logout">logout</button>
+      </form>
+    </header>
+
+    <div class="container">
+      <h1> Add items to <%=listName%> </h1>
+      <form class="signup" action="/lists/<%=listName%>/<%=listID%>/items" method="post">
+           <label id ="itemname" for="itemname">Item Name:</label>
+           <input type="text" name="itemname">
+           <label id ="quantity" for="quantity">Quantity:</label>
+           <input type="text" class="quantity" name="quantity">
+           <label id ="broughtlabel" for="brought">Brought:</label>
+           <select id="brought" name="brought" class="form-control">
+              <option value=f>False</option>
+              <option value=t>True</option>
+         <input class="ghost-button additem" type="submit" value="Add Item">
+      </form>
+    </div>
+    <%- include ../partials/footer %>
+  </body>
+</html>

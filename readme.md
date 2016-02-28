@@ -12,16 +12,7 @@ This application will allow the users to maintain a **simple shopping list**. Do
 * Node.js
 * Express.js
 * Postgres/SQL
-* bcrypt node module
-* pg node module
-* body-parser node module
-* dotenv node module
-* morgan node module
-* express-session node module
-* connect-pg-simple node module
-* method-override node module
-* path node module
-* pryjs node module
+* node modules -brcrypt,pg,body-parser,dotenv,morgan,express-session,connect-pg-simple,method-override,path and pryjs  
 * ejs templating engine
 
 ### User Stories:
@@ -37,18 +28,24 @@ This application will allow the users to maintain a **simple shopping list**. Do
 ### Wireframes version 1:
 #![](wireframes.png)
 
+### Views Used:
+* index - Renders the signup page along with log in button
+* login- Renders the login page for the user
+* user_lists - Renders all the lists specific to each user with an option to view lists or have list as clickable, display each list in card view with all the items,quantity,brought
+* user_list_one - Renders one list for the user with items as clickable links???
+* user_list_add - Add a list
+* user_list_item - Add item to the list
 
 ### RESTful Routes:
 ||Description| Method | Route Name | View rendered |
 |---|---|---|---|---|
-|1|Show application login/signup page | GET  | `/` | `index.ejs` |
-|2|If the user signs up, take them to welcome page | POST  |`/welcome`|`welcome.ejs`|
-|3|If the user logs in, take them to welcome page | GET |`/welcome`| |`welcome.ejs`|
-|4|Show myaccount page, after step 2 or 3, this will show all the lists specific to each user | GET  |`myaccount` |`users_one.ejs`|
-|5|If the user clicks on add list then let the user add list name and items to it|GET,POST |myaccount\lists\add |`users_one.ejs`|
-|6|When the user clicks on a edit/delete specific list, it will show all the items in the list | GET  |`lists\:list_id`|`users_one_list.ejs`|
-|7|If it is edit, show all the items in the list  | GET  |`lists\:list_id`|`users_one_list.ejs`|
-|8|If it is delete | delete | |`lists\:list_id` |delete the list and show all my lists view `users_one.ejs`|
-|9|If the user clicks on the specific item, take them to that item page |GET|`lists\:list_id\items\:item_id` |`users_one_list_item.ejs`|
-|10|If the user clicks on update item, take them to the parent list page with updated information| GET,PUT  |`lists\:list_id\items\:item_id\edit`|`users_one_list.ejs`|
-|11|If the user clicks on delete item, take them to the parent list |DELETE| lists\:list_id\items\:item_id\delete|`users_one_list.ejs`|
+|1|Show application login/signup page | GET | `/` | `index.ejs` |
+|2|Show mylists page, this will show all the lists specific to each user | GET |`users/mylists` |`users_one.ejs`|
+|3|If the user clicks on add list then let the user add list name and add the list to corresponding to user_id|GET,POST |users/lists/new |`users_add_list.ejs`|
+|4|After user adds the list, let the user add the items to the list |GET,POST| users/mylists/listname/items|`users_one_list.ejs`
+|5|When the user clicks on a edit/delete specific list, it will show all the items in the list | GET  |`lists\:list_id`|`users_one_list.ejs`|
+|6|If it is edit, show all the items in the list  | GET  |`lists\:list_id`|`users_one_list.ejs`|
+|7|If it is delete list | delete | |`lists\:list_id\` |delete the list and show all my lists view `users_one.ejs`|
+|8|If the user clicks on the specific item, take them to that item page |GET|`lists\:list_id\items\:item_id` |`users_one_list_item.ejs`|
+|9|If the user clicks on update item, take them to the parent list page with updated information| GET,PUT  |`lists\:list_id\items\:item_id\edit`|`users_one_list.ejs`|
+|10|If the user clicks on delete item, take them to the parent list |DELETE| lists\:list_id\items\:item_id\delete|`users_one_list.ejs`|

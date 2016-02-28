@@ -10,12 +10,11 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var pgSession = require('connect-pg-simple')(session);
 var connectionString = "postgres://razaikboparai:" +process.env.db_password+ "@localhost/shopmate";
-var db = require('./db/pg');
-// invoke express
+var usersdb = require('./db/pg_users');
+var listsdb = require('./db/pg_lists');
+// var itemsdb = require('./db/pg_items');
 var app = express();
 
-// user routes
-var userRoutes = require( path.join(__dirname, '/routes/users'));
 
 app.use(session({
   store: new pgSession({
@@ -25,10 +24,16 @@ app.use(session({
   }),
   secret : 'mysecret',
   resave : false,
+  saveUninitialized: true,
   cookie : { maxAge : 30 * 24 * 60 * 60 * 1000 } // 30 days
 }));
 
-
+//user route
+var userRoutes = require( path.join(__dirname, '/routes/users'));
+// list routes
+var listRoutes = require( path.join(__dirname, '/routes/lists'));
+// // item routes
+// var itemRoutes = require( path.join(__dirname, '/routes/items'));
 
 // log
 app.use(logger('dev'));
@@ -60,7 +65,11 @@ app.get('/', function(req,res){
       res.send('You hit post');
     });
 
+
 app.use('/users', userRoutes);
+app.use('/lists', listRoutes);
+// app.use('/items', itemRoutes);
+
 
 // port for server
 var port = process.env.PORT || 3000;

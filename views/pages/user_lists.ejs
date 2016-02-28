@@ -8,18 +8,20 @@
     <header>
 
       <%- include ../partials/nav %>
-
-
+      <form method="post" action="logout?_method=DELETE">
+        <button class="btn btn-default logout">logout</button>
+      </form>
     </header>
 
     <div class="container">
-
+     <form>
       <div class="starter-template">
-        <h1>ShopMate</h1>
-        <% if (user) {%>
-          <h3>Welcome <%= user %></h3>
+        <h1>ShopMate - Your Personal shopping list organizer</h1>
+        <% if (userName) {%>
+          <h3>Welcome <%= userName %></h3>
         <% } %>
       </div>
+    </form>
 
     </div><!-- /.container -->
 

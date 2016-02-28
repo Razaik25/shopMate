@@ -10,14 +10,14 @@ var session = require('express-session');
 function loginUser(req, res, next) {
     var email = req.body.email;
     var password = req.body.password;
-
+    console.log('in login user',req.session);
     pg.connect(connectionString, function(err, client, done) {
       if (err) {
         done();
         console.log(err);
         return res.status(500).json({success: false, data: err});
       }
-      // add 401 status here 
+      // add 401 status here
       var query = client.query("SELECT * FROM users WHERE email LIKE ($1);", [email], function(err, results) {
         done();
         if (err) {
@@ -26,8 +26,10 @@ function loginUser(req, res, next) {
 
         if (results.rows.length === 0) {
           res.status(204).json({success: true, data: 'no content'});
+
         } else if (bcrypt.compareSync(password, results.rows[0].password_digest)) {
-          res.users = results.rows;
+          res.users = results.rows[0];
+          console.log('before next',req.session);
           next();
         }
       });
@@ -56,13 +58,13 @@ function createUser(req, res, next) {
         return res.status(500).json({success: false, data: err});
       }
 
-      var query = client.query("INSERT INTO users( name,email, password_digest) VALUES ($1, $2, $3) RETURNING users_id,name;", [name, email, hash], function(err, result) {
+      var query = client.query("INSERT INTO users( name,email, password_digest) VALUES ($1, $2, $3);", [name, email, hash], function(err, result) {
         done();
         if (err) {
           return console.error('error running query', err);
         }
 
-        res.users = result.rows;
+        // res.users = result.rows;
         next();
       });
     });
