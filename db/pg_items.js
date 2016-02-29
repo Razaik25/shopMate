@@ -75,8 +75,8 @@ function updateItemsOneList(req,res,next){
       var item_name = req.body.itemname;
       var quantity = req.body.quantity;
       var brought = req.body.brought;
-      // var list_id = req.params.list_id;
       var item_id = req.body.id;
+
       var query = client.query('UPDATE items SET item_name = ($1), quantity = ($2), brought= ($3) where item_id = $4;', [item_name, quantity,brought, item_id],
       function(err,results){
         done();
@@ -88,6 +88,26 @@ function updateItemsOneList(req,res,next){
     });
 }
 
+function deleteitem (req, res, next) {
+  pg.connect(connectionString, function(err, client, done){
+    if(err){
+      done();
+      console.log(err);
+      return res.status(500).json({success: false, data: err});
+    }
+  var item_id = req.body.id;
+  var query = client.query("DELETE FROM items WHERE item_id=$1;", [item_id],
+    function(err, results){
+       if(err) {
+          done();
+          return console.error('error running query', err);
+        }
+       next();
+    });
+  });
+}
+
 module.exports.additems = additems;
 module.exports.showItemsOneList = showItemsOneList;
 module.exports.updateItemsOneList = updateItemsOneList;
+module.exports.deleteitem = deleteitem;

@@ -17,7 +17,7 @@ function loginUser(req, res, next) {
         console.log(err);
         return res.status(500).json({success: false, data: err});
       }
-      // add 401 status here
+
       var query = client.query("SELECT * FROM users WHERE email LIKE ($1);", [email], function(err, results) {
         done();
         if (err) {

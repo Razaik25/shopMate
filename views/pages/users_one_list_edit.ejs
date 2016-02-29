@@ -48,7 +48,8 @@
                  </select>
                   <input  type="submit" value="Update">
                 </form>
-                <form  action="" method="post">
+                <form  action="/lists/<%=listName%>/<%=listID%>/items/edit?_method=DELETE" method="post">
+                  <input type="hidden" name="id" value="<%=items.item_id%>">
                   <input  type="submit" value="Delete">
                 </form>
               <%  }  %>

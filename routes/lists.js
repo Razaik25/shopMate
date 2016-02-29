@@ -35,7 +35,6 @@ lists.post('/new', listsdb.createList, function(req,res){
 lists.get('/:listname/:list_id/items',itemsdb.showItemsOneList, function(req,res){
   // render it to add items page
   // add a  each item in a form and add edit button/ delete button  in front of them
-  console.log(res.lists);
   res.render('pages/users_one_list_item.ejs', {data:res.lists, listName:req.params.listname, listID:req.params.list_id});
 });
 
@@ -46,7 +45,6 @@ lists.post('/:listname/:list_id/items', itemsdb.additems, function(req,res){
 });
 
 
-// lists.put('/:listname/:list_id/items', )
 
 lists.get('/:listname/:list_id/items/edit',itemsdb.showItemsOneList, function(req,res){
   // render it to add items page
@@ -55,14 +53,12 @@ lists.get('/:listname/:list_id/items/edit',itemsdb.showItemsOneList, function(re
 });
 
 lists.put('/:listname/:list_id/items/edit',itemsdb.updateItemsOneList, function(req,res){
-  console.log('i am in put');
-  // res.render('pages/users_one_list_edit.ejs', {data:res.lists, listName:req.params.listname, listID:req.params.list_id});
   res.redirect('./edit');
 });
 
-
-
-
+lists.delete('/:listname/:list_id/items/edit',itemsdb.deleteitem, function(req,res){
+  res.redirect('./edit');
+});
 
 
 lists.delete('/logout', function(req, res) {
@@ -70,6 +66,5 @@ lists.delete('/logout', function(req, res) {
     res.redirect('/');
   });
 });
-
 
 module.exports = lists;
