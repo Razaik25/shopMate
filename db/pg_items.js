@@ -54,7 +54,7 @@ function showItemsOneList(req,res,next){
             INNER JOIN items
             on items.list_id = users_lists.list_id
             WHERE u.users_id= $1 and users_lists.list_id= $2
-            GROUP BY (u.users_id, users_lists.name,users_lists.list_id, items.item_id)
+            GROUP BY u.users_id, users_lists.name,users_lists.list_id, items.item_id
             ORDER BY items.item_id;`,
      [users_id, list_id],
      function(err, result){

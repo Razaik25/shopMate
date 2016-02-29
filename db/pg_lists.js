@@ -56,7 +56,7 @@ function showlistsforuser(req,res,next){
           LEFT JOIN items
           on items.list_id = users_lists.list_id
           WHERE u.users_id= $1
-          GROUP BY( u.users_id, users_lists.name,users_lists.list_id)
+          GROUP BY u.users_id, users_lists.name,users_lists.list_id
           ORDER BY users_lists.list_id;`,[user_id],
       function(err,results){
           done();
