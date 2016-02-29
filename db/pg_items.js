@@ -17,7 +17,7 @@ function additems(req,res,next){
       var brought = req.body.brought;
       var list_id = req.params.list_id;
 
-      var query = client.query('INSERT INTO items(item_name, quantity,brought,list_id) VALUES($1,$2,$3,$4)',[item_name, parseInt(quantity),brought,parseInt(list_id)],
+      var query = client.query('INSERT INTO items(item_name, quantity,brought,list_id) VALUES($1,$2,$3,$4)',[item_name,quantity,brought,parseInt(list_id)],
       function(err,results){
         done();
         if(err) {

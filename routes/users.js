@@ -9,7 +9,7 @@ var listsdb = require('../db/pg_lists');
 // user routes - index page with sign up and log in
 users.get('/', function(req, res) {
   console.log(req.session);
-  res.render('pages/index.ejs');
+  res.render('pages/index.ejs',{user: req.session.user});
 });
 
 // call this when sign up button is clicked and redirect to their myaccount page

@@ -6,14 +6,11 @@
   <body>
     <header>
       <%- include ../partials/nav %>
-      <form method="post" action="/users/logout?_method=DELETE">
-        <button class="btn btn-default logout">logout</button>
-      </form>
     </header>
-
     <div class="container">
-      <h1> Update <%=listName%> </h1>
-      <form class="signup" action="/lists/<%=listName%>/<%=listID%>/items/edit" method="put">
+      <h1> Update my <%=listName%> shopping list </h1>
+      <div class="editcontainer">
+      <form class="signup" action="/lists/<%=listName%>/<%=listID%>/items/edit" method="post">
            <label id ="itemname" for="itemname">Item Name:</label>
            <input id="inputitemname"type="text" name="itemname">
            <label id ="quantity" for="quantity">Quantity:</label>
@@ -23,7 +20,7 @@
               <option value=f>False</option>
               <option value=t>True</option>
           </select>
-         <input class="ghost-button additem" type="submit" value="Add Item">
+         <button class ="addicon" type="submit"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Ic_add_circle_outline_48px.svg/48px-Ic_add_circle_outline_48px.svg.png"></button>
       </form>
       <div class = "showitems" >
         <% if (data.length !==0 ) { %>
@@ -38,7 +35,7 @@
                   <input type="text" class="quantity" name="quantity" value="<%=items.items_quantity[i]%>">
                   <label id ="broughtlabel" for="brought">Brought:</label>
                   <select id="brought1" name="brought" class="form-control">
-                    <% if (items.brought[i]=== 'f'){ %>
+                    <% if (items.brought[i]=== false){ %>
                          <option selected="selected" value=f>False</option>
                           <option value=t>True</option>
                     <% } else { %>
@@ -46,17 +43,19 @@
                           <option  value=f>False</option>
                    <%  }%>
                  </select>
-                  <input  type="submit" value="Update">
+                   <button class ="updateicon" type="submit"><img src="/css/images/update.svg"></button>
                 </form>
                 <form  action="/lists/<%=listName%>/<%=listID%>/items/edit?_method=DELETE" method="post">
                   <input type="hidden" name="id" value="<%=items.item_id%>">
-                  <input  type="submit" value="Delete">
+                  <!-- <input  type="submit" value="Delete"> -->
+                     <button class ="deleteicon" type="submit"><img id="minus" src="/css/images/minus.svg"></button>
                 </form>
               <%  }  %>
             </div>
             <% }) %>
        <% } %>
       </div>
+      <div>
     </div>
     <%- include ../partials/footer %>
   </body>

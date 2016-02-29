@@ -9,15 +9,33 @@ body {
 
 .h1, h1 {
  padding-top: 73px;
- padding-bottom: 49px;
-}
-.container {
-  text-align: center;
+ padding-bottom: 0px;
 }
 
-.container {
- text-align: center;
+.h2, h2 {
+ padding-top: 60px;
+
 }
+.container {
+	text-align: center;
+}
+.container3{
+  text-align: center;
+}
+.editcontainer {
+	text-align: center;
+	padding-top: 30px;
+}
+
+#bg-container2 {
+    background: url(images/test.jpg) no-repeat;
+    background-size: cover;
+    width: 110%;
+    height: 100%;
+    position: fixed;
+		left: -2em;
+}
+
 
 .container2 {
   display: flex;
@@ -152,7 +170,7 @@ body {
 .password1 {
 	position: relative;
 	width: 240px;
-	top: 5em;
+	top: 4em;
 	left: 247px;
 }
 
@@ -200,11 +218,6 @@ body {
   left: 13em;
 }
 
-.logout {
-	position: relative;
-	top: 54px;
-	left: 84em;
-}
 
 .hide{
 	display:none;
@@ -237,15 +250,15 @@ body {
 #brought {
 	position: relative;
   top: -2em;
-  left: 53em;
+  left: 56em;
   width: 6%;
   height: 28px;
 }
 
 .additem {
 	position: relative;
-	top: -59px;
-	left: 30em;
+	top: -63px;
+  left: 25em;
 	width: 93px;
 	height: 38px;
 	font-size: 18px;
@@ -258,6 +271,7 @@ body {
 #update {
 	position: relative;
 	left: -6em;
+	top: -5em;
   width: 33%;
 }
 
@@ -270,70 +284,98 @@ body {
 
 #itemname{
   position: relative;
-  left: -17em;
+  left: -15em;
 }
 
 #inputitemname{
 	position: relative;
-	left: -15em;
+	left: -14em;
 }
 
 #quantity{
 	position: relative;
-  left: -13em;
+  left: -11em;
 }
 
 .quantity{
 	position: relative;
-  left: -11em;
+  left: -10em;
 }
 
 #broughtlabel {
 	position: relative;
-	left:-9em;
+	left:-7em;
 }
 
 
 .showitems {
   display: inline-block;
+	/*padding-left: 20px;*/
 
 }
 
-.listdone {
-	position: relative;
-	width: 8%;
-	top: -216px;
-  left: 21em;
+.showitems1 {
 
+	position: relative;
+  display: inline-block;
+  padding-left: 20px;
+	/*padding-bottom: 5px;*/
+  left: -2em;
+
+}
+
+.donebutton {
+	position: relative;
+	top: -63px;
+	left: 25em;
+	width: 93px;
+	height: 38px;
+	font-size: 18px;
 }
 
 #brought1{
 	position: relative;
 	top: -2em;
 	width: 5em;
-	left: 32em;
+	left: 35em;
 	height: 26px;
 }
-/*
-.updateitem{
+
+.addicon {
 	position: relative;
-	display: inline;
-	width: 17%;
-	font-size: 12px;
-	top: -5em;
-	left: 42em;
-}*/
-/*
-.deleteitem{
+	display: inline-block;
+	top: -78px;
+  left: 24em;
+	cursor: pointer;
+	border: 10px solid transparent;
+	background-color: #FFFFFF;
+}
+
+.updateicon{
 	position: relative;
-	display: inline;
-	width: 17%;
-	font-size: 12px;
-	top: -5em;
-	left: 42em;
-}*/
+	display: inline-block;
+	top: -70px;
+  left: 24em;
+	cursor: pointer;
+	border: 10px solid transparent;
+	background-color: #FFFFFF;
+}
+
+.deleteicon{
+	position: relative;
+	display: inline-block;
+	top: -141px;
+	left: 32em;
+	cursor: pointer;
+	border: 10px solid transparent;
+	background-color: #FFFFFF;
+}
 
 
-/*.checked-off {
-	text-decoration: line-through;
-}*/
+#minus {
+	  width: 72%;
+}
+
+.addcontainer {
+	padding-top: 20px;
+}

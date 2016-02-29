@@ -16,13 +16,17 @@ lists.use(function(req, res, next) {
 
 // shows all the lists specific to each user -- have to come back to this
 lists.get('/', listsdb.showlistsforuser,function(req,res){
-  console.log(res.lists[0].items_price);
-  res.render('pages/user_lists.ejs',{userName:req.session.user.name, data:res.lists});
+  res.render('pages/user_lists.ejs',{user: req.session.user, userName:req.session.user.name, data:res.lists});
+});
+
+lists.delete('/', listsdb.deleteList,function(req,res){
+  res.redirect('/lists');
+  // res.render('pages/user_lists.ejs',{userName:req.session.user.name, data:res.lists});
 });
 
 // to add lists in the database
 lists.get('/new', function(req,res){
-  res.render('pages/users_add_list.ejs', {userID: req.session.user.users_id});
+  res.render('pages/users_add_list.ejs', {user: req.session.user,userID: req.session.user.users_id});
 });
 
 // to add lists in the database
@@ -35,7 +39,8 @@ lists.post('/new', listsdb.createList, function(req,res){
 lists.get('/:listname/:list_id/items',itemsdb.showItemsOneList, function(req,res){
   // render it to add items page
   // add a  each item in a form and add edit button/ delete button  in front of them
-  res.render('pages/users_one_list_item.ejs', {data:res.lists, listName:req.params.listname, listID:req.params.list_id});
+
+  res.render('pages/users_one_list_item.ejs', {user: req.session.user,data:res.lists, listName:req.params.listname, listID:req.params.list_id});
 });
 
 // to add items to a list
@@ -47,9 +52,11 @@ lists.post('/:listname/:list_id/items', itemsdb.additems, function(req,res){
 
 
 lists.get('/:listname/:list_id/items/edit',itemsdb.showItemsOneList, function(req,res){
-  // render it to add items page
-  // add a  each item in a form and add edit button/ delete button  in front of them
-  res.render('pages/users_one_list_edit.ejs', {data:res.lists, listName:req.params.listname, listID:req.params.list_id});
+  res.render('pages/users_one_list_edit.ejs', {user: req.session.user, data:res.lists, listName:req.params.listname, listID:req.params.list_id});
+});
+
+lists.post('/:listname/:list_id/items/edit',itemsdb.additems, function(req,res){
+  res.redirect('./edit');
 });
 
 lists.put('/:listname/:list_id/items/edit',itemsdb.updateItemsOneList, function(req,res){

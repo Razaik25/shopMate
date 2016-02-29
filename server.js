@@ -48,7 +48,7 @@ app.use( bodyParser.urlencoded({ extended: false }));
 app.use( bodyParser.json());
 
 
-// override with POST having ?_method=XXXX
+// method override
 app.use(methodOverride('_method'));
 
 // static route to public
@@ -70,8 +70,13 @@ app.use('/users', userRoutes);
 app.use('/lists', listRoutes);
 // app.use('/items', itemRoutes);
 
+app.delete('/logout', function(req, res) {
+  req.session.destroy(function(err){
+    res.redirect('/');
+  });
+});
 
 // port for server
 var port = process.env.PORT || 3000;
 // start the server
-app.listen(port,()=> console.log('Server Up!', port,'//', new Date() ) );
+app.listen(port,()=> console.log('Server Up!', port, new Date() ) );

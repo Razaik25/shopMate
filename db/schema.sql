@@ -18,7 +18,7 @@ CREATE TABLE users_lists (
 CREATE TABLE items (
       item_id SERIAL PRIMARY KEY UNIQUE,
       item_name VARCHAR(255),
-      quantity integer,
+      quantity VARCHAR(255),
       comments varchar(255),
       brought boolean,
       price money,

@@ -6,20 +6,21 @@
 
   <body>
     <header>
-
       <%- include ../partials/nav %>
-      <form method="post" action="/users/logout?_method=DELETE">
-        <button class="btn btn-default logout">logout</button>
-      </form>
     </header>
 
     <div class="container">
-      <form class="signup" action="/lists/new" method="post">
-           <label id ="listname" for="listname">List Name:</label>
-           <input type="text" class="listadd" name="listname">
-         <input class="ghost-button addlist" type="submit" value="Add List">
-      </form>
 
+      <div class = "container3">
+        <div id="bg-container2">
+        <h2> Make a new list </h2>
+        <form class="signup" action="/lists/new" method="post">
+             <label id ="listname" for="listname">List Name:</label>
+             <input type="text" class="listadd" name="listname">
+           <input class="ghost-button addlist" type="submit" value="Add List">
+        </form>
+      </div>
+      </div>
     </div><!-- /.container -->
     <%- include ../partials/footer %>
   </body>

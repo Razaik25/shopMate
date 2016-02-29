@@ -6,13 +6,10 @@
   <body>
     <header>
       <%- include ../partials/nav %>
-      <form method="post" action="/users/logout?_method=DELETE">
-        <button class="btn btn-default logout">logout</button>
-      </form>
     </header>
-
     <div class="container">
-      <h1> Add items to <%=listName%> </h1>
+      <h1> Add items to <%=listName%> list </h1>
+      <div class= "addcontainer">
       <form class="signup" action="/lists/<%=listName%>/<%=listID%>/items" method="post">
            <label id ="itemname" for="itemname">Item Name:</label>
            <input id="inputitemname"type="text" name="itemname">
@@ -23,21 +20,22 @@
               <option value=f>False</option>
               <option value=t>True</option>
          <input class="ghost-button additem" type="submit" value="Add Item">
-      </form>
-      <div class = "showitems" >
+      </form class="formtest">
+      <div class = "showitems1" >
         <% if (data.length !==0 ) { %>
             <% data.forEach(function(items){ %>
               <% for( var i=0; i < items.items_name.length; i++) { %>
-                <p class="showitems"><b>Item Name: </b><%=items.items_name[i]%></p>
-                <p class="showitems"><b>Quantity: </b><%=items.items_quantity[i]%></p>
-                <p class="showitems"><b>Brought: </b><%=items.brought[i]%></p><br>
+                <p class="showitems1"><b>Item Name: </b><%=items.items_name[i]%></p>
+                <p class="showitems1"><b>Quantity: </b><%=items.items_quantity[i]%></p>
+                <p class="showitems1"><b>Brought: </b><%=items.brought[i]%></p><br>
               <%  }  %>
             <% }) %>
       <% } %>
       </div>
-      <form action="/lists" method="get">
-        <input class="ghost-button listdone" type="submit" value="Done">
+      <form class ="listdone"action="/lists" method="get">
+        <input class=" ghost-button donebutton" type="submit" value="Done">
       </form>
+    </div>
     </div>
     <%- include ../partials/footer %>
   </body>
