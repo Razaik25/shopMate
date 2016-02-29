@@ -9,7 +9,13 @@ var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var pgSession = require('connect-pg-simple')(session);
-var connectionString = "postgres://razaikboparai:" +process.env.db_password+ "@localhost/shopmate";
+
+if(process.env.ENVIRONMENT === 'production'){     // in heroku: add environment = production in config variables
+  var connectionString = process.env.DATABASE_URL;
+} else {                                          // in local
+  var connectionString = "postgres://razaikboparai:" +process.env.db_password+ "@localhost/shopmate";
+}
+
 var usersdb = require('./db/pg_users');
 var listsdb = require('./db/pg_lists');
 // var itemsdb = require('./db/pg_items');

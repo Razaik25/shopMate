@@ -1,6 +1,11 @@
 require('dotenv').config();
 var pg = require('pg');
-var connectionString = "postgres://razaikboparai:" +process.env.db_password+ "@localhost/shopmate";
+if(process.env.ENVIRONMENT === 'production'){     // in heroku: add environment = production in config variables
+  var connectionString = process.env.DATABASE_URL;
+} else {                                          // in local
+  var connectionString = "postgres://razaikboparai:" +process.env.db_password+ "@localhost/shopmate";
+}
+// var connectionString = "postgres://razaikboparai:" +process.env.db_password+ "@localhost/shopmate";
 var bodyParser = require('body-parser');
 
 
