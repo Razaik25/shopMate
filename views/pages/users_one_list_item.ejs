@@ -8,7 +8,7 @@
       <%- include ../partials/nav %>
     </header>
     <div class="container">
-      <h1> Add items to <%=listName%> list </h1>
+        <h1> Add items to <%=listName%> list </h1>
       <div class= "addcontainer">
       <form class="signup" action="/lists/<%=listName%>/<%=listID%>/items" method="post">
            <label id ="itemname" for="itemname">Item Name:</label>
@@ -20,7 +20,7 @@
               <option value=f>False</option>
               <option value=t>True</option>
          <input class="ghost-button additem" type="submit" value="Add Item">
-      </form class="formtest">
+      </form>
       <div class = "showitems1" >
         <% if (data.length !==0 ) { %>
             <% data.forEach(function(items){ %>
@@ -31,11 +31,11 @@
               <%  }  %>
             <% }) %>
       <% } %>
+    </div class="formtest">
+        <form class ="listdone"action="/lists" method="get">
+          <input class=" ghost-button donebutton" type="submit" value="Done">
+        </form>
       </div>
-      <form class ="listdone"action="/lists" method="get">
-        <input class=" ghost-button donebutton" type="submit" value="Done">
-      </form>
-    </div>
     </div>
     <%- include ../partials/footer %>
   </body>

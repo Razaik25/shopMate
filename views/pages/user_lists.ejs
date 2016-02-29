@@ -6,28 +6,25 @@
 
   <body>
     <header>
-
       <%- include ../partials/nav %>
 
     </header>
 
     <div class="container">
-
+     <div id="bg-card">
       <div class="starter-template">
-        <h1>ShopMate - Your Personal shopping list organizer</h1>
-        <!-- <% if (userName) {%>
-          <h3>Welcome <%= userName %></h3>
-        <% } %> -->
+        <h1>ShopMate - Your Personal Shopping List Organizer</h1>
       </div>
+      <!-- <div id="bg-card"> -->
       <div class="container2">
         <% data.forEach (function(lists) { %>
           <div class="listcard">
             <ul>
                <form  action="/lists/?_method=DELETE" method="post">
 
-              <div class="card-img">
+              <!-- <div class="card-img">
                 <p><img src="http://sandyhaight.com/wp-content/uploads/2011/02/3shopping-cart-600x600.jpg"></p>
-             </div>
+             </div> -->
               <div class="card-listname">
                 <p><b>List Name: </b><%=lists.listname%></p>
               </div>
@@ -38,7 +35,6 @@
                   <img src="./css/images/item.png">
                    <p><b>Name: </b><%=lists.items_name[i]%></p>
                    <p><b>Quantity: </b><%=lists.items_quantity[i]%></p>
-                   <!-- <p><b>Price: </b><%=lists.items_price[i]%></p> -->
                    <p><b>Brought: </b><%=lists.brought[i]%></p>
                  </div>
               <% } %>
@@ -49,18 +45,13 @@
             <form  action="/lists/<%=lists.listname%>/<%=lists.list_id%>/items/edit" method="get">
              <input id="update" type="submit" class="btn btn-primary" value="Update" >
            </form>
-           <!-- <form  action="/lists/?_method=DELETE" method="post">
-             <input  id ="delete" type="submit" class="btn btn-danger"value="Delete" >
-           </form> -->
            </ul>
           </div>
       <% }) %>
       </div>
-
-
-    </div><!-- /.container -->
-
-
+    <!-- </div> -->
+  </div>
+    </div>
     <%- include ../partials/footer %>
   </body>
 </html>

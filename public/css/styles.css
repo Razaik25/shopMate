@@ -10,10 +10,12 @@ body {
 .h1, h1 {
  padding-top: 73px;
  padding-bottom: 0px;
+ text-shadow: 1px 1px 1px white;
 }
 
 .h2, h2 {
  padding-top: 60px;
+ /*text-shadow: 1px 1px 1px white;*/
 
 }
 .container {
@@ -36,6 +38,15 @@ body {
 		left: -2em;
 }
 
+#bg-card{
+	background: url(images/test2.jpg) no-repeat;
+	background-size: cover;
+	width: 110%;
+	height: 100%;
+	position: relative;;
+	left: -4em;
+}
+
 
 .container2 {
   display: flex;
@@ -44,15 +55,17 @@ body {
 }
 
 .listcard {
+	 opacity: 0.7;
    width: 400px;
    margin: 5% auto;
    box-shadow: 0 1px 30px rgba(0,0,0,.4);
    background-color: #fff;
    border-radius: 4px;
    transition: 400ms ease;
+
 }
 
-.card-img {
+/*.card-img {
   height: 300px;
 }
 
@@ -63,22 +76,24 @@ body {
   margin: 5% auto;
   padding: 15px 35px 5px 25px;
   border-radius: 4px 4px 0px 0px;
-}
+}*/
 
 .card-data {
    position: relative;
    left: -15px;
 	 top: -4em;
-   padding: 0px 25px 5px 25px;
+   /*padding: 0px 25px 5px 25px;*/
+	 padding: 59px 35px 5px 25px;
    border-radius: 0px 0px 4px 4px;
    font-size: 15px;
 }
 
 .card-listname{
 	position: relative;
-	top: -3em;
+	top: 0em;
 	left: -1em;
 	font-size: 20px;
+	padding: 59px 35px 5px 25px;
 }
 
 #bg-container {
@@ -311,17 +326,14 @@ body {
 .showitems {
   display: inline-block;
 	/*padding-left: 20px;*/
-
 }
 
 .showitems1 {
-
 	position: relative;
   display: inline-block;
   padding-left: 20px;
 	/*padding-bottom: 5px;*/
   left: -2em;
-
 }
 
 .donebutton {
@@ -371,11 +383,10 @@ body {
 	background-color: #FFFFFF;
 }
 
-
 #minus {
 	  width: 72%;
 }
 
 .addcontainer {
-	padding-top: 20px;
+	padding-top: 72px;
 }
