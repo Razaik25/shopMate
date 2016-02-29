@@ -15,14 +15,28 @@
       <h1> Add items to <%=listName%> </h1>
       <form class="signup" action="/lists/<%=listName%>/<%=listID%>/items" method="post">
            <label id ="itemname" for="itemname">Item Name:</label>
-           <input type="text" name="itemname">
-           <label id ="quantity" for="quantity">Quantity:</label>
+           <input id="inputitemname"type="text" name="itemname">
+           <label id ="quantity" for="quantity">Quantity:</label>``
            <input type="text" class="quantity" name="quantity">
            <label id ="broughtlabel" for="brought">Brought:</label>
            <select id="brought" name="brought" class="form-control">
               <option value=f>False</option>
               <option value=t>True</option>
          <input class="ghost-button additem" type="submit" value="Add Item">
+      </form>
+      <div class = "showitems" >
+        <% if (data.length !==0 ) { %>
+            <% data.forEach(function(items){ %>
+              <% for( var i=0; i < items.items_name.length; i++) { %>
+                <p class="showitems"><b>Item Name: </b><%=items.items_name[i]%></p>
+                <p class="showitems"><b>Quantity: </b><%=items.items_quantity[i]%></p>
+                <p class="showitems"><b>Brought: </b><%=items.brought[i]%></p><br>
+              <%  }  %>
+            <% }) %>
+      <% } %>
+      </div>
+      <form action="/lists" method="get">
+        <input class="ghost-button listdone" type="submit" value="Done">
       </form>
     </div>
     <%- include ../partials/footer %>

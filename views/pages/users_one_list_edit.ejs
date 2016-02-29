@@ -1,0 +1,62 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include ../partials/head %>
+  </head>
+  <body>
+    <header>
+      <%- include ../partials/nav %>
+      <form method="post" action="/users/logout?_method=DELETE">
+        <button class="btn btn-default logout">logout</button>
+      </form>
+    </header>
+
+    <div class="container">
+      <h1> Update <%=listName%> </h1>
+      <form class="signup" action="/lists/<%=listName%>/<%=listID%>/items/edit" method="put">
+           <label id ="itemname" for="itemname">Item Name:</label>
+           <input id="inputitemname"type="text" name="itemname">
+           <label id ="quantity" for="quantity">Quantity:</label>
+           <input type="text" class="quantity" name="quantity">
+           <label id ="broughtlabel" for="brought">Brought:</label>
+           <select id="brought" name="brought" class="form-control">
+              <option value=f>False</option>
+              <option value=t>True</option>
+          </select>
+         <input class="ghost-button additem" type="submit" value="Add Item">
+      </form>
+      <div class = "showitems" >
+        <% if (data.length !==0 ) { %>
+            <% data.forEach(function(items){ %>
+              <div>
+              <% for( var i=0; i < items.items_name.length; i++) { %>
+                <form  action="/lists/<%=listName%>/<%=listID%>/items/edit?_method=PUT" method="post">
+                  <label id ="itemname" for="itemname">Item Name:</label>
+                  <input type="hidden" name="id" value="<%=items.item_id%>">
+                  <input id="inputitemname" name="itemname" value="<%=items.items_name[i]%>">
+                  <label id ="quantity" for="quantity">Quantity:</label>
+                  <input type="text" class="quantity" name="quantity" value="<%=items.items_quantity[i]%>">
+                  <label id ="broughtlabel" for="brought">Brought:</label>
+                  <select id="brought1" name="brought" class="form-control">
+                    <% if (items.brought[i]=== 'f'){ %>
+                         <option selected="selected" value=f>False</option>
+                          <option value=t>True</option>
+                    <% } else { %>
+                         <option selected="selected" value=t>True</option>
+                          <option  value=f>False</option>
+                   <%  }%>
+                 </select>
+                  <input  type="submit" value="Update">
+                </form>
+                <form  action="" method="post">
+                  <input  type="submit" value="Delete">
+                </form>
+              <%  }  %>
+            </div>
+            <% }) %>
+       <% } %>
+      </div>
+    </div>
+    <%- include ../partials/footer %>
+  </body>
+</html>

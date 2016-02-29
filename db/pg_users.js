@@ -10,7 +10,7 @@ var session = require('express-session');
 function loginUser(req, res, next) {
     var email = req.body.email;
     var password = req.body.password;
-    console.log('in login user',req.session);
+    // console.log('in login user',req.session);
     pg.connect(connectionString, function(err, client, done) {
       if (err) {
         done();
@@ -29,7 +29,7 @@ function loginUser(req, res, next) {
 
         } else if (bcrypt.compareSync(password, results.rows[0].password_digest)) {
           res.users = results.rows[0];
-          console.log('before next',req.session);
+          // console.log('before next',req.session);
           next();
         }
       });

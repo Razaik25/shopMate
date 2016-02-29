@@ -146,14 +146,14 @@ body {
 	position: relative;
 	width: 240px;
 	top: 3em;
-	left: 21em;
+	left: 18em;
 }
 
 .password1 {
 	position: relative;
 	width: 240px;
 	top: 5em;
-	left: 279px;
+	left: 247px;
 }
 
 .loginbutton2{
@@ -237,22 +237,101 @@ body {
 #brought {
 	position: relative;
   top: -2em;
-  left: 61em;
+  left: 53em;
   width: 6%;
   height: 28px;
 }
 
 .additem {
 	position: relative;
-	top: -4em;
-	left: 27em;
-	width: 114px;
-	height: 47px;
+	top: -59px;
+	left: 30em;
+	width: 93px;
+	height: 38px;
 	font-size: 18px;
 }
+
 .item-img img {
     width: 24%;
 }
+
+#update {
+	position: relative;
+	left: -6em;
+  width: 33%;
+}
+
+#delete {
+	position: relative;
+	top: -34px;
+	left: 4em;
+	width: 33%;
+}
+
+#itemname{
+  position: relative;
+  left: -17em;
+}
+
+#inputitemname{
+	position: relative;
+	left: -15em;
+}
+
+#quantity{
+	position: relative;
+  left: -13em;
+}
+
+.quantity{
+	position: relative;
+  left: -11em;
+}
+
+#broughtlabel {
+	position: relative;
+	left:-9em;
+}
+
+
+.showitems {
+  display: inline-block;
+
+}
+
+.listdone {
+	position: relative;
+	width: 8%;
+	top: -216px;
+  left: 21em;
+
+}
+
+#brought1{
+	position: relative;
+	top: -2em;
+	width: 5em;
+	left: 32em;
+	height: 26px;
+}
+/*
+.updateitem{
+	position: relative;
+	display: inline;
+	width: 17%;
+	font-size: 12px;
+	top: -5em;
+	left: 42em;
+}*/
+/*
+.deleteitem{
+	position: relative;
+	display: inline;
+	width: 17%;
+	font-size: 12px;
+	top: -5em;
+	left: 42em;
+}*/
 
 
 /*.checked-off {

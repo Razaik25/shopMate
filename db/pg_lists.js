@@ -15,7 +15,7 @@ function createList(req,res,next){
     var listname  = req.body.listname;
     var users_id = req.session.user.users_id;
 
-    var query = client.query("INSERT INTO users_lists (name,users_id) VALUES($1,$2) RETURNING list_id,name",
+    var query = client.query("INSERT INTO users_lists (name,users_id) VALUES($1,$2) RETURNING list_id,name;",
     [listname, users_id],
      function(err, result){
       done();
@@ -48,8 +48,9 @@ function showlistsforuser(req,res,next){
           ON u.users_id = users_lists.users_id
           LEFT JOIN items
           on items.list_id = users_lists.list_id
-          WHERE u.users_id= $1
-          GROUP BY( u.users_id, users_lists.name,users_lists.list_id);`,[user_id],
+          WHERE u.users_id= $1 
+          GROUP BY( u.users_id, users_lists.name,users_lists.list_id)
+          ORDER BY users_lists.list_id;`,[user_id],
       function(err,results){
           done();
         if(err) {
