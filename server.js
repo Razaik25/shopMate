@@ -9,6 +9,10 @@ var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var pgSession = require('connect-pg-simple')(session);
+var favicon    = require('serve-favicon');
+var app = express();
+
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 if(process.env.ENVIRONMENT === 'production'){     // in heroku: add environment = production in config variables
   var connectionString = process.env.DATABASE_URL;
@@ -19,7 +23,6 @@ if(process.env.ENVIRONMENT === 'production'){     // in heroku: add environment 
 var usersdb = require('./db/pg_users');
 var listsdb = require('./db/pg_lists');
 
-var app = express();
 
 
 app.use(session({
@@ -38,6 +41,8 @@ app.use(session({
 var userRoutes = require( path.join(__dirname, '/routes/users'));
 // list routes
 var listRoutes = require( path.join(__dirname, '/routes/lists'));
+
+
 
 // log
 app.use(logger('dev'));

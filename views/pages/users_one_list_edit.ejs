@@ -20,14 +20,14 @@
               <option value=f>False</option>
               <option value=t>True</option>
           </select>
-         <button class ="addicon" type="submit"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Ic_add_circle_outline_48px.svg/48px-Ic_add_circle_outline_48px.svg.png"></button>
+         <button class ="addicon" type="submit"><img class="addimg"src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Ic_add_circle_outline_48px.svg/48px-Ic_add_circle_outline_48px.svg.png"></button>
       </form>
       <div class = "showitems" >
         <% if (data.length !==0 ) { %>
             <% data.forEach(function(items){ %>
-              <div class="formedit">
+              <div>
               <% for( var i=0; i < items.items_name.length; i++) { %>
-                <form  action="/lists/<%=listName%>/<%=listID%>/items/edit?_method=PUT" method="post">
+                <form  class ="formedit"action="/lists/<%=listName%>/<%=listID%>/items/edit?_method=PUT" method="post">
                   <label id ="itemname" for="itemname">Item Name:</label>
                   <input type="hidden" name="id" value="<%=items.item_id%>">
                   <input id="inputitemname" name="itemname" value="<%=items.items_name[i]%>">
@@ -54,9 +54,8 @@
             <% }) %>
        <% } %>
       </div>
-
+      <div>
     </div>
-  </div>
     <%- include ../partials/footer %>
   </body>
 </html>
