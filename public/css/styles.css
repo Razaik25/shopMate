@@ -11,12 +11,18 @@ body {
  padding-top: 73px;
  padding-bottom: 0px;
  text-shadow: 1px 1px 1px white;
+ font-size: 65px;
 }
 
 .h2, h2 {
- padding-top: 60px;
- text-shadow: 1px 1px 1px white;
+
+ 	padding-top: 60px;
+	text-shadow: 1px 1px 1px white;
+	font-size: 65px;
+	color: white;
 }
+
+
 
 .container {
 	text-align: center;
@@ -26,16 +32,16 @@ body {
 }
 .editcontainer {
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 42px;
 }
 
 #bg-container2 {
-    background: url(images/test.jpg) no-repeat;
-    background-size: cover;
-    width: 110%;
-    height: 100%;
-    position: fixed;
-		left: -2em;
+  background: url(images/test4.jpg) no-repeat;
+  background-size: cover;
+  width: 110%;
+  height: 100%;
+  position: fixed;
+	left: -2em;
 }
 
 #bg-card{
@@ -65,24 +71,11 @@ body {
 
 }
 
-/*.card-img {
-  height: 300px;
-}
-
-.card-img img {
-  position: relative;
-  width:60%;
-  left: -15px;
-  margin: 5% auto;
-  padding: 15px 35px 5px 25px;
-  border-radius: 4px 4px 0px 0px;
-}*/
 
 .card-data {
    position: relative;
    left: -15px;
 	 top: -4em;
-   /*padding: 0px 25px 5px 25px;*/
 	 padding: 59px 35px 5px 25px;
    border-radius: 0px 0px 4px 4px;
    font-size: 15px;
@@ -97,11 +90,11 @@ body {
 }
 
 #bg-container {
-    background: url(images/background.jpg) no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: fixed;
+  background: url(images/background.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
 
 .box {
@@ -243,40 +236,46 @@ body {
 }
 
 #listname {
+
 	position: relative;
-	top: 103px;
-  font-size: 20px;
+  top: 103px;
+  font-size: 46px;
+  color: white;
 }
 
 .listadd {
 	position: relative;
-	top: 7em;
+	top: 92px;
 	left: 1em;
+	height: 45px;
 }
 
 .addlist {
+
 	position: relative;
-	width: 88px;
-  font-size: 16px;
-	top: 6em;
-	left:3em;
+	width: 123px;
+	font-size: 29px;
+	top: 103px;
+	left: 1em;
+	height: 51px;
 }
 
 #brought {
 	position: relative;
-  top: -2em;
-  left: 56em;
-  width: 6%;
-  height: 28px;
+	top: -31px;
+	left: 40em;
+	width: 8%;
+	height: 28px;
+	font-size: 20px;
 }
 
 .additem {
 	position: relative;
 	top: -63px;
-  left: 25em;
-	width: 93px;
-	height: 38px;
-	font-size: 18px;
+	left: 24em;
+	width: 99px;
+	height: 44px;
+	font-size: 20px;
 }
 
 .item-img img {
@@ -299,7 +298,8 @@ body {
 
 #itemname{
   position: relative;
-  left: -15em;
+	left: -11em;
+	font-size: 20px;
 }
 
 #inputitemname{
@@ -309,17 +309,19 @@ body {
 
 #quantity{
 	position: relative;
-  left: -11em;
+	left: -8em;
+	font-size: 20px;
 }
 
 .quantity{
 	position: relative;
-  left: -10em;
+  left: -11em;
 }
 
 #broughtlabel {
 	position: relative;
-	left:-7em;
+	left:-6em;
+	font-size: 20px
 }
 
 
@@ -332,30 +334,32 @@ body {
   display: inline-block;
   padding-left: 20px;
   left: -2em;
+	font-size: 29px;
 }
 
 .donebutton {
 	position: relative;
-	top: -40px;
-	left: 25em;
-	width: 93px;
-	height: 38px;
-	font-size: 18px;
+	top: -29px;
+	left: 24em;
+	width: 98px;
+	height: 45px;
+	font-size: 20px;
 }
 
 #brought1{
 	position: relative;
-	top: -2em;
-	width: 5em;
-	left: 35em;
-	height: 26px;
+	top: -31px;
+	left: 547px;
+	width: 14%;
+	height: 28px;
+	font-size: 20px;
 }
 
 .addicon {
 	position: relative;
 	display: inline-block;
 	top: -78px;
-  left: 24em;
+  left: 30em;
 	cursor: pointer;
 	border: 10px solid transparent;
 	background-color: #FFFFFF;
@@ -365,7 +369,7 @@ body {
 	position: relative;
 	display: inline-block;
 	top: -70px;
-  left: 24em;
+  left: 30em;
 	cursor: pointer;
 	border: 10px solid transparent;
 	background-color: #FFFFFF;
@@ -374,8 +378,8 @@ body {
 .deleteicon{
 	position: relative;
 	display: inline-block;
-	top: -141px;
-	left: 32em;
+	top: -25px;
+	left: 38em;
 	cursor: pointer;
 	border: 10px solid transparent;
 	background-color: #FFFFFF;
@@ -387,10 +391,12 @@ body {
 
 .addcontainer {
 	padding-top: 72px;
+  position: relative;
+  left: 5em;
 }
 
 .formedit {
-  height: 89px;
+  height: 0px;
 
 }
 
@@ -404,4 +410,8 @@ body {
   left: 12em;
   position: relative;
   font-size: 30px;
+}
+
+.addimg {
+	width: 90%
 }
