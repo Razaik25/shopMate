@@ -15,14 +15,11 @@ body {
 }
 
 .h2, h2 {
-
  	padding-top: 60px;
 	text-shadow: 1px 1px 1px white;
 	font-size: 65px;
 	color: white;
 }
-
-
 
 .container {
 	text-align: center;
@@ -68,7 +65,7 @@ body {
    background-color: #fff;
    border-radius: 4px;
    transition: 400ms ease;
-
+   margin-bottom: 20px;
 }
 
 
@@ -263,9 +260,9 @@ body {
 #brought {
 	position: relative;
 	top: -31px;
-	left: 40em;
+	left: 41em;
 	width: 8%;
-	height: 28px;
+	height: 38px;
 	font-size: 20px;
 }
 
@@ -279,7 +276,7 @@ body {
 }
 
 .item-img img {
-    width: 24%;
+    width: 17%;
 }
 
 #update {
@@ -349,9 +346,9 @@ body {
 #brought1{
 	position: relative;
 	top: -31px;
-	left: 547px;
+	left: 575px;
 	width: 14%;
-	height: 28px;
+	height: 38px;
 	font-size: 20px;
 }
 

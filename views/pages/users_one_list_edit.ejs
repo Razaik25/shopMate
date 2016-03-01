@@ -15,7 +15,7 @@
            <input id="inputitemname"type="text" name="itemname">
            <label id ="quantity" for="quantity">Quantity:</label>
            <input type="text" class="quantity" name="quantity">
-           <label id ="broughtlabel" for="brought">Brought:</label>
+           <label id ="broughtlabel" for="brought">Purchased:</label>
            <select id="brought" name="brought" class="form-control">
               <option value=f>False</option>
               <option value=t>True</option>
@@ -33,7 +33,7 @@
                   <input id="inputitemname" name="itemname" value="<%=items.items_name[i]%>">
                   <label id ="quantity" for="quantity">Quantity:</label>
                   <input type="text" class="quantity" name="quantity" value="<%=items.items_quantity[i]%>">
-                  <label id ="broughtlabel" for="brought">Brought:</label>
+                  <label id ="broughtlabel" for="brought">Purchased:</label>
                   <select id="brought1" name="brought" class="form-control">
                     <% if (items.brought[i]=== false){ %>
                          <option selected="selected" value=f>False</option>
