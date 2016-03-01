@@ -21,7 +21,6 @@ lists.get('/', listsdb.showlistsforuser,function(req,res){
 
 lists.delete('/', listsdb.deleteList,function(req,res){
   res.redirect('/lists');
-  // res.render('pages/user_lists.ejs',{userName:req.session.user.name, data:res.lists});
 });
 
 // to add lists in the database
@@ -39,7 +38,6 @@ lists.post('/new', listsdb.createList, function(req,res){
 lists.get('/:listname/:list_id/items',itemsdb.showItemsOneList, function(req,res){
   // render it to add items page
   // add a  each item in a form and add edit button/ delete button  in front of them
-
   res.render('pages/users_one_list_item.ejs', {user: req.session.user,data:res.lists, listName:req.params.listname, listID:req.params.list_id});
 });
 

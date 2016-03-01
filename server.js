@@ -9,10 +9,16 @@ var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var pgSession = require('connect-pg-simple')(session);
-var connectionString = "postgres://razaikboparai:" +process.env.db_password+ "@localhost/shopmate";
+
+if(process.env.ENVIRONMENT === 'production'){     // in heroku: add environment = production in config variables
+  var connectionString = process.env.DATABASE_URL;
+} else {                                          // in local
+  var connectionString = "postgres://razaikboparai:" +process.env.db_password+ "@localhost/shopmate";
+}
+
 var usersdb = require('./db/pg_users');
 var listsdb = require('./db/pg_lists');
-// var itemsdb = require('./db/pg_items');
+
 var app = express();
 
 
@@ -32,8 +38,6 @@ app.use(session({
 var userRoutes = require( path.join(__dirname, '/routes/users'));
 // list routes
 var listRoutes = require( path.join(__dirname, '/routes/lists'));
-// // item routes
-// var itemRoutes = require( path.join(__dirname, '/routes/items'));
 
 // log
 app.use(logger('dev'));
@@ -55,7 +59,6 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
 //home route
 app.get('/', function(req,res){
      res.render('./pages/index.ejs');
@@ -68,7 +71,7 @@ app.get('/', function(req,res){
 
 app.use('/users', userRoutes);
 app.use('/lists', listRoutes);
-// app.use('/items', itemRoutes);
+
 
 app.delete('/logout', function(req, res) {
   req.session.destroy(function(err){

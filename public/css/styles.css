@@ -15,9 +15,9 @@ body {
 
 .h2, h2 {
  padding-top: 60px;
- /*text-shadow: 1px 1px 1px white;*/
-
+ text-shadow: 1px 1px 1px white;
 }
+
 .container {
 	text-align: center;
 }
@@ -42,7 +42,7 @@ body {
 	background: url(images/test2.jpg) no-repeat;
 	background-size: cover;
 	width: 110%;
-	height: 100%;
+	height: 200%;
 	position: relative;;
 	left: -4em;
 }
@@ -229,7 +229,7 @@ body {
 
 .loginbutton {
   position: relative;
-	top: 64px;
+	top: 87px;
   left: 13em;
 }
 
@@ -244,13 +244,13 @@ body {
 
 #listname {
 	position: relative;
-	top: 126px;
- font-size: 20px;
+	top: 103px;
+  font-size: 20px;
 }
 
 .listadd {
 	position: relative;
-	top: 9em;
+	top: 7em;
 	left: 1em;
 }
 
@@ -258,7 +258,7 @@ body {
 	position: relative;
 	width: 88px;
   font-size: 16px;
-	top: 8em;
+	top: 6em;
 	left:3em;
 }
 
@@ -325,20 +325,18 @@ body {
 
 .showitems {
   display: inline-block;
-	/*padding-left: 20px;*/
 }
 
 .showitems1 {
 	position: relative;
   display: inline-block;
   padding-left: 20px;
-	/*padding-bottom: 5px;*/
   left: -2em;
 }
 
 .donebutton {
 	position: relative;
-	top: -63px;
+	top: -40px;
 	left: 25em;
 	width: 93px;
 	height: 38px;
@@ -389,4 +387,21 @@ body {
 
 .addcontainer {
 	padding-top: 72px;
+}
+
+.formedit {
+  height: 89px;
+
+}
+
+.signup {
+	height: 66px;
+}
+
+.nodata {
+	text-align: center;
+  top: 3em;
+  left: 12em;
+  position: relative;
+  font-size: 30px;
 }
