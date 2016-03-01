@@ -31,10 +31,10 @@ This application will allow the users to maintain a **simple shopping list**. Do
 ### Views Used:
 * index - Renders the signup page along with log in button
 * login- Renders the login page for the user
-* user_lists - Renders all the lists specific to each user with an option to view lists or have list as clickable, display each list in card view with all the items,quantity,brought
-* user_list_one - Renders one list for the user with items as clickable links???
-* user_list_add - Add a list
-* user_list_item - Add item to the list
+* users_lists - Renders all the lists specific to each user with an option to view lists , display each list in card view with all the names of the items in the list
+* users_one_list_edit - Renders one list for the user with items to edit
+* user_list_add_list - Add a new list
+* user_one_list_item - Add item to the list
 
 ### RESTful Routes:
 ||Description| Method | Route Name | View rendered |
@@ -45,7 +45,15 @@ This application will allow the users to maintain a **simple shopping list**. Do
 |4|After user adds the list, let the user add the items to the list |GET,POST| users/mylists/listname/items|`users_one_list.ejs`
 |5|When the user clicks on a edit/delete specific list, it will show all the items in the list | GET  |`lists\:list_id`|`users_one_list.ejs`|
 |6|If it is edit, show all the items in the list  | GET  |`lists\:list_id`|`users_one_list.ejs`|
-|7|If it is delete list | delete | |`lists\:list_id\` |delete the list and show all my lists view `users_one.ejs`|
+|7|If it is delete list |DELETE | |`lists\:list_id\` |delete the list and show all my lists view `users_one.ejs`|
 |8|If the user clicks on the specific item, take them to that item page |GET|`lists\:list_id\items\:item_id` |`users_one_list_item.ejs`|
 |9|If the user clicks on update item, take them to the parent list page with updated information| GET,PUT  |`lists\:list_id\items\:item_id\edit`|`users_one_list.ejs`|
 |10|If the user clicks on delete item, take them to the parent list |DELETE| lists\:list_id\items\:item_id\delete|`users_one_list.ejs`|
+
+### Future Implementations:
+* Improve SQL queries to order them by item_ids and test them for all the cases
+* Implement the Edge case scenarios in my code
+* Implement user roles (Admin and customers)
+* Query google api to get the first image of the  item the user enters
+* Include Jquery to add animations for the user interface
+* Improve the application interface
