@@ -2,7 +2,7 @@
 ---
 
 #![](https://static.mgmresorts.com/content/dam/MGM/monte-carlo/retail/shopping-hero-image/monte-carlo-amenities-shopping-bags.tiff.image.1440.550.high.jpg)
----
+
 
 ### Introduction - How to use it?
 ---
@@ -68,6 +68,7 @@ Please visit at http://shopmate.herokuapp.com/
 * user_one_list_item - Add item to the list
 
 ### RESTful Routes:
+---
 ||Description| Method | Route Name | View rendered |
 |---|---|---|---|---|
 |1|Show application login/signup page | GET | `/` | `index.ejs` |
@@ -82,7 +83,8 @@ Please visit at http://shopmate.herokuapp.com/
 |10|If the user clicks on delete item, take them to the parent list |DELETE| `lists\:list_id\items\edit`|`users_one_list.ejs`|
 
 ### Future Implementations:
-* Implement the showing error messages to the users
+---
+* Show error messages to the users
 * Implement user roles (Admin and customers)
 * Query google api to get the first image of the item the user enters
 * Include Jquery to add animations for the user interface

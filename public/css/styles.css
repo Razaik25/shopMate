@@ -1,10 +1,24 @@
-body {
-	font-family: Futura;
+
+/* ==========================================================================
+	 Normalize.css
+========================================================================== */
+
+@import "normalize.css";
+
+/* ==========================================================================
+	 Main styles
+========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  box-sizing: border-box;
 }
 
-.starter-template {
-  padding: 40px 15px;
-  text-align: center;
+body {
+  font-family: Futura;
+  font-size: 16px;
 }
 
 .h1, h1 {
@@ -20,6 +34,78 @@ body {
 	font-size: 65px;
 	color: white;
 }
+/* ==========================================================================
+	 styles for index and login page
+========================================================================== */
+#bg-container {
+  background: url(images/background.jpg) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.box {
+	margin: auto;
+	position: relative;
+	top: 60px;
+	height: auto;
+	min-height: 400px;
+	width: 575px;
+	background-color: white;
+	opacity: 0.7;
+	border-radius: 5px;
+
+}
+
+.box h1 {
+	position: relative;
+	font-size: 40px;
+  width: 12em;
+  left: -2em;
+	padding: 40px 0 0 177px;
+
+}
+
+.name {
+  position: relative;
+  width: 240px;
+  left: 16em;
+}
+
+.email {
+  position: relative;
+  width: 240px;
+  top: 3em;
+  left: 21em;
+}
+
+.password {
+  position: relative;
+  width: 240px;
+  top: 8em;
+  left: -92px;
+}
+
+
+
+/* ==========================================================================
+	 styles for user_lists 
+========================================================================== */
+
+
+
+
+
+
+
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+
 
 .container {
 	text-align: center;
@@ -86,55 +172,7 @@ body {
 	padding: 59px 35px 5px 25px;
 }
 
-#bg-container {
-  background: url(images/background.jpg) no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-}
 
-.box {
-	margin: auto;
-	position: relative;
-	top: 60px;
-	height: auto;
-	min-height: 400px;
-	width: 575px;
-	background-color: white;
-	opacity: 0.7;
-	border-radius: 5px;
-
-}
-
-.box h1 {
-	position: relative;
-	font-size: 40px;
-  width: 12em;
-  left: -2em;
-	padding: 40px 0 0 177px;
-
-}
-
-.name {
-  position: relative;
-  width: 240px;
-  left: 16em;
-}
-
-.email {
-  position: relative;
-  width: 240px;
-  top: 3em;
-  left: 21em;
-}
-
-.password {
-  position: relative;
-  width: 240px;
-  top: 8em;
-  left: -92px;
-}
 
 #lable1 {
 	position: relative;

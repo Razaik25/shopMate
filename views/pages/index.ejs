@@ -4,27 +4,26 @@
 		<title>ShopMate</title>
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
-<body>
-<div id="bg-container">
-		<div class="box">
-			<h1>Welcome to ShopMate</h1><img class="icon"src ="https://wooddesignes.com/wp-content/uploads/2015/03/shoppingcart.png">
-		 <form class="signup" action="/users" method="post">
+	<body>
+		<div id="bg-container">
+				<div class="box">
+					<h1>Welcome to ShopMate</h1><img class="icon"src ="https://wooddesignes.com/wp-content/uploads/2015/03/shoppingcart.png">
+		 			<form class="signup" action="/users" method="post">
+        			<label id ="lable1" for="name">Name:</label>
+			  			<input type="text" class="name" name="name" required>
 
-        	<label id ="lable1" for="name">Name:</label>
-			  	<input type="text" class="name" name="name" required>
+        			<label id="label2"for="email">Email:</label>
+        			<input type="text" class="email" name="email" required>
 
-        	<label id="label2"for="email">Email:</label>
-        	<input type="text" class="email" name="email" required>
+        			<label id="label3"for="password">Password:</label>
+        			<input type="password" class="password" name="password" required>
 
-        	<label id="label3"for="password">Password:</label>
-        	<input type="password" class="password" name="password" required>
-
-        <input class="ghost-button signbutton" type="submit" value="Sign Up">
-     </form>
-    <form class="login" action="/users/login" method="get">
-      <input class="ghost-button loginbutton" type="submit" value="Log In">
-    </form>
-	</div>
-</div>
-</body>
+        		<input class="ghost-button signbutton" type="submit" value="Sign Up">
+     		</form>
+    		<form class="login" action="/users/login" method="get">
+      		<input class="ghost-button loginbutton" type="submit" value="Log In">
+    		</form>
+			</div> <!-- box -->
+		</div> <!-- bg-container -->
+	</body>
 </html>
